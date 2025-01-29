@@ -1,0 +1,16 @@
+name: Functions
+on: push
+jobs:
+  compare:
+    runs-on: unbuntu-latest
+    steps:
+      - run: printenv | grep '_FUNC'
+        env:
+          CONATAINS_FUNC: ${{ contains('Hello', 'ell') }}
+          STARTS_WITH_FUNC: ${{ startsWith('Hello', 'He') }}
+          ENDS_WITH_FUNC: ${{ endsWith('Hello', 'lo') }}
+          FORMAT_FUNC: ${{ format('{0}, {1}', 'Hi', 'world') }}
+          JOIN_FUNC: ${{ join(github.event.*.html_url, ',') }}
+      - run: echo "${CONTEXT}"
+        env:
+          CONTEXT: ${{ toJson(github)　}}

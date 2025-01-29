@@ -2,7 +2,7 @@ name: Conditions
 on: push
 jobs:
   skip-or-run:
-    if: ${{ github.actor == 'octocat' }}
+    if: ${{ github.actor == 'keiichi4e' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "github.run_id ", ${{ github.run_id }}, "contains 9"

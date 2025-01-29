@@ -6,4 +6,4 @@ jobs:
     steps:
       - run: echo "github.run_id is ", ${{ github.run_id }}
       - run: echo "Hello"
-        if: ${{ contains(github.run_id, '1') }}
+        if: ${{ contains(github.run_id, '9') }}

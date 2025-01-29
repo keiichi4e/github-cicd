@@ -17,4 +17,4 @@ jobs:
       - uses: 'actions/checkout@v4'
       - run: echo "${HASH}"
         env:
-          HASH: ${{ hashFiles('.github/wortkflows/*.yml') }}
+          HASH: ${{ hashFiles('.github/workflows/*.yml') }}

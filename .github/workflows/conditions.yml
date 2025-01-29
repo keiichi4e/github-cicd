@@ -7,6 +7,6 @@ jobs:
     steps:
       - run: echo "github.run_id ", ${{ github.run_id }}, "contains 9"
         if: ${{ contains(github.run_id, '9') }}
-      - run: exit 1
-      - run: echo "Fail"
-        if: ${{ failure() }}
+#      - run: exit 1
+#      - run: echo "Fail"
+#        if: ${{ failure() }}

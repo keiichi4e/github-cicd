@@ -2,7 +2,7 @@ name: Functions
 on: push
 jobs:
   functions:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - run: printenv | grep '_FUNC'
         env:

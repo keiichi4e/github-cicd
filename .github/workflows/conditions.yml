@@ -1,0 +1,9 @@
+name: Conditions
+on: push
+jobs:
+  skip-or-run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "github.run_id is ", ${{ github.run_id }}
+      - run: echo "Hello"
+        if: ${{ contains(github.run_id, '1') }}

@@ -13,5 +13,5 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@4
+      - uses: actions/checkout@v4
       - run: docker run --rm -v "{PWD}:${PWD}" -w "$PWD" rhysd/actionlint:latest

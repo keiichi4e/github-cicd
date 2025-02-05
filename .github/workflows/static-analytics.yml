@@ -14,4 +14,5 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - run: docker run --rm -v "${pwd}:${pwd}" -w "${pwd}" rhysd/actionlint:latest
+      - run: |
+         docker run --rm -v "${pwd}:${pwd}" -w "${pwd}" rhysd/actionlint:latest

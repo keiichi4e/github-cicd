@@ -8,7 +8,7 @@ jobs:
         run: echo "result=Hello" >> "${GITHUB_OUTPUT}"
       - env:
           RESULT: ${{ steps.source.outputs.result }}
-        run: echo ${RESULT}
+        run: echo "${RESULT}"
   github-env:
     runs-on: ubuntu-latest
     steps:

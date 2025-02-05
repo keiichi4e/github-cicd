@@ -1,0 +1,17 @@
+name: Static analytics
+on:
+  pull_request:
+    paths: ['.github/workflows/*.yml', '.github/workgflows/*.yaml']
+defaults:
+  run:
+    shell: bash
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@4
+      - run: docker run --rm -v "{PWD}:${PWD}" -w "$PWD" rhysd/actionlint:latest

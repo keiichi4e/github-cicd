@@ -5,11 +5,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "::debug::This is a debug log"
-      - run: echo "::warning::This is a warning log"
-      - run: echo "::error::This is an error log"
-      - run: echo "::group::This is a group log"
-      - run: echo "::endgroup::"
-      - run: echo "::add-mask::This is a masked log"
-      - run: echo "::debug::This is a debug log"
-      - run: echo "::enddebug::"
- 

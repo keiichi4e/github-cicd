@@ -5,6 +5,7 @@ jobs:
   job-summaries:
     runs-on: ubuntu-latest
     steps:
-      - echo "## Example Title :rocket:" >> ${GITHUB_STEP_SUMMARY}
-      - echo "- first line" >> ${GITHUB_STEP_SUMMARY}
-      - echo "- second line" >> ${GITHUB_STEP_SUMMARY}
+      - run: |
+          echo "## Example Title :rocket:" >> "${GITHUB_STEP_SUMMARY}
+          echo "- first line" >> ${GITHUB_STEP_SUMMARY}
+          echo "- second line" >> ${GITHUB_STEP_SUMMARY}

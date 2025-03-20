@@ -1,4 +1,4 @@
-name: Override environment variables
+name: Override Environment Variables
 on: push
 env:
   EXAMPLE: Defined by workflow level

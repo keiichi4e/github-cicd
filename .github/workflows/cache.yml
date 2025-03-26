@@ -2,7 +2,7 @@ name: Cache
 on: push
 jobs:
   cache:
-    runs-on: ubuntu-linux
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/cache@v4

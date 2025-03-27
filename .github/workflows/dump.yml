@@ -11,4 +11,4 @@ jobs:
           enable-context: 'ture'
       - run: echo "$DATE"
         env:
-          DATE: if{{ steps.dump.outputs.dumped-date}}
+          DATE: ${{ steps.dump.outputs.dumped-date}}

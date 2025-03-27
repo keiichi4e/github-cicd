@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./github/actions/dump/
+      - uses: ../github/actions/dump/
         id: dump
         with:
           enable-context: 'ture'

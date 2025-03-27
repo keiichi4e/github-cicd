@@ -1,0 +1,14 @@
+name: Dump
+on: push
+jobs:
+  debug:
+    runs-on: ubuntu-latst
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./github/actions/dump/
+        id: dump
+        with:
+          enable-context: 'ture'
+      - run: echo "$DATE"
+        env:
+          DATE: if{{ steps.dump.outputs.dumped-date}}

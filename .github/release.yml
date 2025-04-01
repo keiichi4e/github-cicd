@@ -3,7 +3,8 @@ changelog:
     - title: Enhancement
       labels:
         - enhancement
-    - title: Bug Fixes
-      labels:
-        - bug
-        - fixes
+  exclude:
+    label:
+      - dependencies
+    authors:
+      - dependabot
